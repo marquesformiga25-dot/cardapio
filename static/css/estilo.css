@@ -1,0 +1,894 @@
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f3f4;
+    font-family: Arial, sans-serif;
+    color: #383333;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   CABEÇALHO E LOGO DO IFPB
+===================================== */
+
+header,
+header.cabecalho {
+    width: 100%;
+    min-height: 125px;
+    background-color: #681c32 !important;
+    color: white !important;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+    padding: 18px 25px;
+    text-align: left;
+}
+
+header img,
+header.cabecalho img {
+    display: block;
+    width: 85px;
+    height: 85px;
+    max-width: 85px;
+    max-height: 85px;
+
+    object-fit: contain;
+
+    background-color: white;
+    padding: 6px;
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+.titulo-cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+header h1,
+header.cabecalho h1,
+.titulo-cabecalho h1 {
+    color: white !important;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0 0 9px 0;
+}
+
+header p,
+header.cabecalho p,
+.titulo-cabecalho p {
+    color: #f5e8ec !important;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =====================================
+   PÁGINA INICIAL
+===================================== */
+
+.container {
+    width: 950px;
+    max-width: 90%;
+    min-height: 440px;
+
+    margin: 45px auto;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* IMAGEM DA PÁGINA INICIAL */
+
+.container .imagem {
+    width: 40%;
+    min-height: 440px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    background-color: #f0e3e7;
+}
+
+.container .imagem img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    max-height: 260px;
+
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+
+/* FORMULÁRIO INICIAL */
+
+.container .formulario {
+    width: 60%;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.formulario h2 {
+    color: #681c32;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.formulario p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+
+/* =====================================
+   CAMPOS E FORMULÁRIOS
+===================================== */
+
+label {
+    display: block;
+    color: #41383b;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    padding: 12px 14px;
+
+    border: 1px solid #ded5d8;
+    border-radius: 8px;
+
+    background-color: white;
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8c3b54;
+    box-shadow: 0 0 0 3px rgba(104, 28, 50, 0.08);
+}
+
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+button,
+.botao {
+    display: inline-block;
+
+    background-color: #681c32;
+    color: white;
+
+    padding: 13px 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.botao:hover {
+    background-color: #8c2948;
+    transform: translateY(-2px);
+}
+
+.formulario button {
+    width: 160px;
+    height: 47px;
+}
+
+
+/* =====================================
+   PÁGINA DE DECISÃO
+===================================== */
+
+.caixa {
+    background-color: white;
+
+    width: 620px;
+    max-width: 90%;
+
+    margin: 55px auto;
+    padding: 40px;
+
+    border-radius: 16px;
+    text-align: center;
+
+    box-shadow: 0 5px 22px rgba(70, 30, 40, 0.10);
+}
+
+.caixa h2 {
+    color: #681c32;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.caixa p {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.opcoes button {
+    min-width: 130px;
+}
+
+
+/* =====================================
+   PÁGINA DO CARDÁPIO
+===================================== */
+
+.cardapio {
+    width: 90%;
+    max-width: 1050px;
+
+    margin: 35px auto;
+    padding: 30px 35px;
+
+    background-color: white;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 22px rgba(70, 30, 40, 0.10);
+}
+
+.cardapio h2 {
+    color: #681c32;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.cardapio p {
+    color: #777;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.alimentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item {
+    width: 180px;
+
+    background-color: #fcf9f9;
+    border: 1px solid #eee1e5;
+    border-radius: 12px;
+
+    padding: 15px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.item:hover {
+    border-color: #c18b9b;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(70, 30, 40, 0.10);
+}
+
+.item img {
+    width: 100%;
+    height: 115px;
+
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.item label {
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.item input {
+    width: auto;
+    height: auto;
+    margin: 5px;
+    accent-color: #681c32;
+}
+
+.cardapio button {
+    display: block;
+    margin: 30px auto 0;
+    min-width: 200px;
+}
+
+
+/* =====================================
+   PÁGINA DE AGRADECIMENTO
+===================================== */
+
+.agradecimento {
+    background-color: white;
+
+    width: 620px;
+    max-width: 90%;
+
+    margin: 55px auto;
+    padding: 40px;
+
+    border-radius: 16px;
+    text-align: center;
+
+    box-shadow: 0 5px 22px rgba(70, 30, 40, 0.10);
+}
+
+.agradecimento h1 {
+    color: #681c32;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.agradecimento p {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.selecionados {
+    margin: 22px 0;
+    color: #681c32;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.mensagem-final {
+    margin-bottom: 25px;
+}
+
+.link-botao {
+    display: inline-block;
+
+    background-color: #681c32;
+    color: white;
+
+    padding: 13px 25px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-botao:hover {
+    background-color: #8c2948;
+}
+
+
+/* =====================================
+   ACESSO À COZINHA NA PÁGINA INICIAL
+===================================== */
+
+.acesso-cozinha {
+    position: fixed;
+    right: 24px;
+    bottom: 22px;
+
+    text-align: center;
+    z-index: 10;
+}
+
+.acesso-cozinha p {
+    color: #681c32;
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+
+.acesso-cozinha a {
+    display: inline-block;
+
+    background-color: #681c32;
+    color: white;
+
+    padding: 13px 20px;
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(70, 30, 40, 0.15);
+    transition: 0.3s;
+}
+
+.acesso-cozinha a:hover {
+    background-color: #8c2948;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   LOGIN DA COZINHA
+===================================== */
+
+.login-cozinha {
+    width: 430px;
+    max-width: 92%;
+
+    margin: 55px auto;
+    padding: 40px;
+
+    background-color: white;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 25px rgba(70, 30, 40, 0.10);
+    text-align: center;
+}
+
+.login-cozinha h1,
+.login-cozinha h2 {
+    color: #681c32;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.login-cozinha p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.login-cozinha form {
+    text-align: left;
+}
+
+.login-cozinha label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: bold;
+}
+
+.login-cozinha input {
+    width: 100%;
+    height: 48px;
+    padding: 12px;
+    margin-bottom: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.login-cozinha button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.login-cozinha a {
+    display: inline-block;
+    margin-top: 22px;
+
+    color: #681c32;
+    text-decoration: none;
+}
+
+.login-cozinha a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   PAINEL DA COZINHA
+===================================== */
+
+.painel-cozinha {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+    padding: 35px;
+
+    background-color: white;
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 22px rgba(70, 30, 40, 0.10);
+}
+
+.painel-cozinha > h1 {
+    color: #681c32;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.painel-cozinha > p {
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.painel-cozinha > h2 {
+    color: #681c32;
+    margin: 30px 0 15px;
+}
+
+
+/* RESUMO DAS QUANTIDADES */
+
+.resumo-cozinha {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.resumo-item {
+    background-color: #f8eef1;
+    border: 1px solid #ead6dc;
+
+    border-radius: 12px;
+    width: 230px;
+
+    padding: 25px 15px;
+}
+
+.resumo-item h2 {
+    color: #681c32;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.resumo-item p {
+    margin: 0;
+    color: #555;
+}
+
+
+/* TABELAS */
+
+.painel-cozinha table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.painel-cozinha th {
+    background-color: #681c32;
+    color: white;
+    padding: 16px 12px;
+    font-size: 14px;
+}
+
+.painel-cozinha td {
+    padding: 15px 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.painel-cozinha tr:hover {
+    background-color: #faf3f5;
+}
+
+
+/* BOTÃO SAIR */
+
+.botao-sair {
+    display: inline-block;
+
+    margin-top: 28px;
+    padding: 12px 30px;
+
+    background-color: #681c32;
+    color: white;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-sair:hover {
+    background-color: #8c2948;
+}
+
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    padding: 18px;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 750px) {
+
+    header,
+    header.cabecalho {
+        min-height: 100px;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    header img,
+    header.cabecalho img {
+        width: 60px;
+        height: 60px;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    header h1,
+    .titulo-cabecalho h1 {
+        font-size: 18px;
+    }
+
+    header p,
+    .titulo-cabecalho p {
+        font-size: 11px;
+    }
+
+    .container {
+        width: 92%;
+        flex-direction: column;
+        margin: 25px auto 100px;
+    }
+
+    .container .imagem,
+    .container .formulario {
+        width: 100%;
+    }
+
+    .container .imagem {
+        min-height: 190px;
+    }
+
+    .container .imagem img {
+        height: 140px;
+    }
+
+    .container .formulario {
+        padding: 30px;
+    }
+
+    .formulario button {
+        width: 100%;
+    }
+
+    .caixa,
+    .agradecimento {
+        width: 92%;
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .cardapio {
+        width: 94%;
+        padding: 20px;
+    }
+
+    .alimentos {
+        gap: 12px;
+    }
+
+    .item {
+        width: 45%;
+    }
+
+    .item img {
+        height: 90px;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opcoes button {
+        width: 100%;
+    }
+
+    .login-cozinha {
+        padding: 28px;
+        margin: 35px auto;
+    }
+
+    .painel-cozinha {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .painel-cozinha table {
+        min-width: 550px;
+    }
+
+    .resumo-cozinha {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resumo-item {
+        width: 100%;
+    }
+
+    .acesso-cozinha {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+
+/* =====================================
+   PÁGINA DE RESULTADOS DA COZINHA
+===================================== */
+
+.pagina-resultados {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #f5f1f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painel-cozinha {
+    width: 100%;
+    max-width: 950px;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 30px 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.titulo-painel {
+    margin-bottom: 25px;
+}
+
+.titulo-painel h1 {
+    color: #681c32;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.titulo-painel p {
+    color: #777;
+    font-size: 16px;
+    margin: 0;
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.painel-cozinha table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.painel-cozinha th {
+    background-color: #681c32;
+    color: white;
+    padding: 13px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.painel-cozinha td {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eadde1;
+    text-align: center;
+}
+
+.painel-cozinha tr:nth-child(even) {
+    background-color: #faf4f6;
+}
+
+.painel-cozinha tr:hover {
+    background-color: #f3e5e9;
+}
+
+.botao-sair {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 35px;
+    background-color: #681c32;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.botao-sair:hover {
+    background-color: #8b2947;
+    transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
+    .pagina-resultados {
+        padding: 10px;
+    }
+
+    .painel-cozinha {
+        padding: 20px 12px;
+    }
+
+    .titulo-painel h1 {
+        font-size: 22px;
+    }
+
+    .painel-cozinha th,
+    .painel-cozinha td {
+        padding: 9px 6px;
+        font-size: 12px;
+    }
+}
